@@ -40,3 +40,40 @@ sudo usermod -aG docker $USER
 echo "Docker and Docker Compose installation has completed."
 echo "Docker version: $(docker --version)"
 echo "Docker Compose version: $(docker-compose --version)"
+
+
+
+
+
+# sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# sudo apt update
+# sudo apt install docker-ce
+
+# sudo systemctl start docker
+# sudo systemctl enable docker
+
+
+
+# docker swarm init --advertise-addr <MANAGER-IP>
+# docker network create --driver overlay --attachable my-overlay
+
+
+# # docker-compose.yaml
+# version: '3'
+# services:
+#   web:
+#     image: nginx
+#     ports:
+#       - "80:80"
+#     networks:
+#       - my-overlay
+# networks:
+#   my-overlay:
+#     external: true
+
+
+# docker stack deploy -c docker-compose.yml myapp
+
